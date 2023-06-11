@@ -22,7 +22,8 @@ export function ProfileForm({ user }: any) {
       },
     })
 
-    user = await res.json()
+    const updatedUser = await res.json()
+    user = { ...updatedUser }
   }
 
   useEffect(() => {
