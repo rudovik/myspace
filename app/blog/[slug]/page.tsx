@@ -10,7 +10,7 @@ interface Props {
   params: { slug: string }
 }
 
-export async function generateStaticPararms() {
+export async function generateStaticParams() {
   const posts: Post[] = await fetch("http://localhost:3000/api/content").then(
     (res) => res.json()
   )
