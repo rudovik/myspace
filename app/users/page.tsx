@@ -2,8 +2,6 @@ import { prisma } from "@/lib/prisma"
 import styles from "./page.module.css"
 import UserCard from "@/components/UserCard/UserCard"
 
-export const revalidate = 0
-
 async function getUsers() {
   const users = await prisma.user.findMany()
   return users
