@@ -20,7 +20,7 @@ export function ProfileForm({ user }: any) {
         "Content-Type": "application/json",
       },
     })
-    console.log(res)
+    console.log(res.body)
   }
 
   return (
