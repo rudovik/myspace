@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma"
 import styles from "./page.module.css"
 import UserCard from "@/components/UserCard/UserCard"
 
+export const revalidate = 0
+
 export default async function Users() {
   // throw new Error("This is an error")
 
