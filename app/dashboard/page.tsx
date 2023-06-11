@@ -4,6 +4,8 @@ import { redirect } from "next/navigation"
 import { prisma } from "@/lib/prisma"
 import { ProfileForm } from "./ProfileForm"
 
+export const revalidate = 0
+
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)
 

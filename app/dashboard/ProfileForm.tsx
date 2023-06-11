@@ -27,16 +27,22 @@ export function ProfileForm({ user }: any) {
       <h2>Edit Your Profile</h2>
       <form onSubmit={updateUser}>
         <label htmlFor="name">Name</label>
-        <input type="text" name="name" defaultValue={user?.name ?? ""} />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          defaultValue={user?.name ?? ""}
+        />
         <label htmlFor="bio">Bio</label>
         <textarea
           name="bio"
+          id="bio"
           cols={30}
           rows={10}
           defaultValue={user?.bio ?? ""}
         ></textarea>
         <label htmlFor="age">Age</label>
-        <input type="text" name="age" defaultValue={user?.age ?? 0} />
+        <input type="text" name="age" id="age" defaultValue={user?.age ?? 0} />
         <label htmlFor="image">Profile Image URL</label>
         <input type="text" name="image" defaultValue={user?.image ?? ""} />
 
