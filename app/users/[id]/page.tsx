@@ -8,6 +8,8 @@ interface Props {
   }
 }
 
+export const revalidate = 0
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const user = await prisma.user.findUnique({ where: { id: params.id } })
   return { title: `User profile of ${user?.name}` }
