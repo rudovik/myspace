@@ -7,7 +7,7 @@ import AuthCheck from "@/components/AuthCheck"
 export default function NavMenu() {
   return (
     <nav className={styles.nav}>
-      <Link href={"/"} prefetch={false}>
+      <Link href={"/"}>
         <Image
           src="/logo.svg"
           width={216}
@@ -18,19 +18,13 @@ export default function NavMenu() {
       </Link>
       <ul className={styles.links}>
         <li>
-          <Link href={"/about"} prefetch={false}>
-            About
-          </Link>
+          <Link href={"/about"}>About</Link>
         </li>
         <li>
-          <Link href={"/blog"} prefetch={false}>
-            Blog
-          </Link>
+          <Link href={"/blog"}>Blog</Link>
         </li>
         <li>
-          <Link href={"/users"} prefetch={false}>
-            Users
-          </Link>
+          <Link href={"/users"}>Users</Link>
         </li>
         <li>
           <SignInButton />
