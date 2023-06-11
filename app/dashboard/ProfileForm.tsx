@@ -1,7 +1,5 @@
 "use client"
 
-export const revalidate = 0
-
 export function ProfileForm({ user }: any) {
   const updateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()

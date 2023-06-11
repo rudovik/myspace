@@ -3,8 +3,6 @@ import { getServerSession } from "next-auth"
 import { prisma } from "@/lib/prisma"
 import { authOptions } from "../auth/[...nextauth]/route"
 
-export const revalidate = 0
-
 export async function PUT(req: Request) {
   const session = await getServerSession(authOptions)
   const currentUserEmail = session?.user?.email!
