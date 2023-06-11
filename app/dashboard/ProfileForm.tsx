@@ -20,7 +20,6 @@ export function ProfileForm({ user }: any) {
         "Content-Type": "application/json",
       },
     })
-    user = await res.json()
   }
 
   return (
