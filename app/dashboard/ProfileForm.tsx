@@ -44,7 +44,12 @@ export function ProfileForm({ user }: any) {
         <label htmlFor="age">Age</label>
         <input type="text" name="age" id="age" defaultValue={user?.age ?? 0} />
         <label htmlFor="image">Profile Image URL</label>
-        <input type="text" name="image" defaultValue={user?.image ?? ""} />
+        <input
+          type="text"
+          name="image"
+          id="image"
+          defaultValue={user?.image ?? ""}
+        />
 
         <button type="submit">Save</button>
       </form>
