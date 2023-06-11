@@ -25,7 +25,9 @@ export function ProfileForm({ user }: any) {
     user = await res.json()
   }
 
-  useEffect(() => {}, [user])
+  useEffect(() => {
+    console.log(user)
+  }, [user])
 
   return (
     <div>
