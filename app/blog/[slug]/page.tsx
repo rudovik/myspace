@@ -29,7 +29,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <main>
-      <h1>Posts</h1>
+      <h1>Post</h1>
       {/* <h1>{post.title}</h1> */}
       {/* <p>{post.content}</p> */}
     </main>
