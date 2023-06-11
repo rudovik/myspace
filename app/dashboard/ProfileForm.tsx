@@ -1,5 +1,4 @@
 "use client"
-import { useEffect } from "react"
 
 export function ProfileForm({ user }: any) {
   const updateUser = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -23,12 +22,8 @@ export function ProfileForm({ user }: any) {
     })
 
     const updatedUser = await res.json()
-    user = { ...updatedUser }
+    console.log(updatedUser)
   }
-
-  useEffect(() => {
-    console.log(user)
-  }, [user])
 
   return (
     <div>
