@@ -5,13 +5,13 @@ import { authOptions } from "./api/auth/[...nextauth]/route"
 export default async function Home() {
   const session = await getServerSession(authOptions)
 
-  // if (!session) {
-  //   redirect("/api/auth/signin")
-  // }
+  if (!session) {
+    redirect("/api/auth/signin")
+  }
 
   return (
     <main>
-      <h1>Hello There!</h1>
+      <h1>Main Page</h1>
     </main>
   )
 }
