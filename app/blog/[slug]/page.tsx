@@ -10,27 +10,28 @@ interface Props {
   params: { slug: string }
 }
 
-export async function generateStaticParams() {
-  const posts: Post[] = await fetch(
-    "https://myspace-git-main-rudovik.vercel.app/api/content"
-  ).then((res) => res.json())
+// export async function generateStaticParams() {
+//   const posts: Post[] = await fetch(
+//     "https://myspace-git-main-rudovik.vercel.app/api/content"
+//   ).then((res) => res.json())
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
-}
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }))
+// }
 
 export default async function BlogPostPage({ params }: Props) {
   // deduped
-  const posts: Post[] = await fetch(
-    "https://myspace-git-main-rudovik.vercel.app/api/content"
-  ).then((res) => res.json())
-  const post = posts.find((post) => post.slug === params.slug)!
+  // const posts: Post[] = await fetch(
+  //   "https://myspace-git-main-rudovik.vercel.app/api/content"
+  // ).then((res) => res.json())
+  // const post = posts.find((post) => post.slug === params.slug)!
 
   return (
     <main>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
+      <h1>Posts</h1>
+      {/* <h1>{post.title}</h1> */}
+      {/* <p>{post.content}</p> */}
     </main>
   )
 }
