@@ -9,7 +9,6 @@ export default async function Users() {
 
   return (
     <main className={styles.grid}>
-      <h2>There are: {users.length} users</h2>
       {users.map((user) => {
         return <UserCard key={user.id} {...user} />
       })}
