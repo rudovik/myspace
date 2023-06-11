@@ -1,6 +1,10 @@
 "use client"
 
+import { useState } from "react"
+
 export function ProfileForm({ user }: any) {
+  const [loading, setLoading] = useState(false)
+
   const updateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
@@ -13,6 +17,7 @@ export function ProfileForm({ user }: any) {
       image: formData.get("image"),
     }
 
+    setLoading(true)
     const res = await fetch("/api/user", {
       method: "PUT",
       body: JSON.stringify(body),
@@ -20,6 +25,7 @@ export function ProfileForm({ user }: any) {
         "Content-Type": "application/json",
       },
     })
+    setLoading(false)
   }
 
   return (
@@ -51,7 +57,9 @@ export function ProfileForm({ user }: any) {
           defaultValue={user?.image ?? ""}
         />
 
-        <button type="submit">Save</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "..." : "Save"}
+        </button>
       </form>
     </div>
   )
