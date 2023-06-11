@@ -4,8 +4,13 @@ import UserCard from "@/components/UserCard/UserCard"
 
 export const revalidate = 0
 
-export default async function Users() {
+async function getUsers() {
   const users = await prisma.user.findMany()
+  return users
+}
+
+export default async function Users() {
+  const users = await getUsers()
 
   return (
     <main className={styles.grid}>
