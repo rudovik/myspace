@@ -2,9 +2,9 @@ import { prisma } from "@/lib/prisma"
 import styles from "./page.module.css"
 import UserCard from "@/components/UserCard/UserCard"
 
-export default async function Users() {
-  // throw new Error("This is an error")
+export const revalidate = 0
 
+export default async function Users() {
   const users = await prisma.user.findMany()
 
   return (
