@@ -1,12 +1,12 @@
 "use client"
 
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 
 import { useState } from "react"
 
 export function ProfileForm({ user }: any) {
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
+  // const router = useRouter()
 
   const updateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -28,7 +28,7 @@ export function ProfileForm({ user }: any) {
         "Content-Type": "application/json",
       },
     })
-    router.refresh()
+    // router.refresh()
     setLoading(false)
   }
 
