@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "./UserCard.module.css"
-import DynamicLink from "../DynamicLink"
+// import DynamicLink from "../DynamicLink"
 
 interface Props {
   id: string
@@ -19,7 +19,7 @@ export default function UserCard({ id, name, age, image }: Props) {
       />
       <div className={styles.cardContent}>
         <h3>
-          <DynamicLink href={`/users/${id}`}>{name}</DynamicLink>
+          <Link href={`/users/${id}`}>{name}</Link>
         </h3>
         <h4>age: {age}</h4>
       </div>

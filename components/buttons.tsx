@@ -3,7 +3,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import Image from "next/image"
 import Link from "next/link"
-import DynamicLink from "./DynamicLink"
+// import DynamicLink from "./DynamicLink"
 
 export function SignInButton() {
   const { data: session, status } = useSession()
@@ -15,14 +15,14 @@ export function SignInButton() {
 
   if (status === "authenticated") {
     return (
-      <DynamicLink href={`/dashboard`}>
+      <Link href={`/dashboard`}>
         <Image
           src={session.user?.image ?? "/mememan.webp"}
           width={32}
           height={32}
           alt="Your Name"
         />
-      </DynamicLink>
+      </Link>
     )
   }
 
