@@ -28,7 +28,7 @@ export function ProfileForm({ user }: any) {
         "Content-Type": "application/json",
       },
     })
-    router.refresh()
+    // router.refresh()
     setLoading(false)
   }
 
