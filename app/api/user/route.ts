@@ -20,7 +20,7 @@ export async function PUT(req: NextRequest) {
   })
 
   // revalidatePath("/users")
-  revalidatePath(`/users/${user.id}`)
+  // revalidatePath(`/users/${user.id}`)
 
   return NextResponse.json(user)
 }
