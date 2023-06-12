@@ -7,6 +7,8 @@ async function getUsers() {
   return users
 }
 
+export const revalidate = 0
+
 export default async function Users() {
   const users = await getUsers()
 

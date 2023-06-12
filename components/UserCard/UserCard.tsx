@@ -8,8 +8,6 @@ interface Props {
   image: string | null
 }
 
-export const revalidate = 0
-
 export default function UserCard({ id, name, age, image }: Props) {
   return (
     <div className={styles.card}>
