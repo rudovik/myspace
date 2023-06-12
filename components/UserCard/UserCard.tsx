@@ -18,9 +18,7 @@ export default function UserCard({ id, name, age, image }: Props) {
       />
       <div className={styles.cardContent}>
         <h3>
-          <Link href={`/users/${id}`} prefetch={false}>
-            {name}
-          </Link>
+          <Link href={`/users/${id}`}>{name}</Link>
         </h3>
         <h4>age: {age}</h4>
       </div>
