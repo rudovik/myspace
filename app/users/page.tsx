@@ -3,7 +3,12 @@ import styles from "./page.module.css"
 import UserCard from "@/components/UserCard/UserCard"
 
 async function getUsers(): Promise<User[]> {
-  const res = await fetch("/api/users", { next: { revalidate: 0 } })
+  const res = await fetch(
+    "https://myspace-git-main-rudovik.vercel.app/api/users",
+    {
+      next: { revalidate: 0 },
+    }
+  )
   return await res.json()
 }
 
