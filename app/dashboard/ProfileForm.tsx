@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { revalidatePath } from "next/cache"
 
 export function ProfileForm({ user }: any) {
   const [loading, setLoading] = useState(false)
@@ -26,8 +25,6 @@ export function ProfileForm({ user }: any) {
         "Content-Type": "application/json",
       },
     })
-    revalidatePath("/users")
-    revalidatePath(`/users/${user.id}`)
     setLoading(false)
   }
 
