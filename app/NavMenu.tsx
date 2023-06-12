@@ -3,6 +3,7 @@ import Image from "next/image"
 import styles from "./NavMenu.module.css"
 import { SignInButton, SignOutButton } from "@/components/buttons"
 import AuthCheck from "@/components/AuthCheck"
+import DynamicLink from "@/components/DynamicLink"
 
 export default function NavMenu() {
   return (
@@ -24,7 +25,7 @@ export default function NavMenu() {
           <Link href={"/blog"}>Blog</Link>
         </li>
         <li>
-          <Link href={"/users"}>Users</Link>
+          <DynamicLink href={"/users"}>Users</DynamicLink>
         </li>
         <li>
           <SignInButton />
