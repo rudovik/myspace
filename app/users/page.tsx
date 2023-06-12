@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma"
 import styles from "./page.module.css"
 import UserCard from "@/components/UserCard/UserCard"
+import Refresher from "@/components/Refresher"
 
 async function getUsers() {
   const users = await prisma.user.findMany()
@@ -17,6 +18,7 @@ export default async function Users() {
       {users.map((user) => {
         return <UserCard key={user.id} {...user} />
       })}
+      <Refresher />
     </main>
   )
 }
